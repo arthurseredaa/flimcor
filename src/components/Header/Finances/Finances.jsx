@@ -16,7 +16,11 @@ export const Finances = ({ finances, collapsed }) => {
       <div
         onClick={() => (showModal ? handleHide() : handleShow())}
         className={classes.financesWrapper}
-        style={collapsed ? { backgroundColor: "transparent", position: "block" } : undefined}
+        style={
+          collapsed
+            ? { backgroundColor: "transparent", position: "static" }
+            : undefined
+        }
       >
         <span
           className={classes.money}

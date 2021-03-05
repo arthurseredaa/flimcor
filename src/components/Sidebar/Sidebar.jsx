@@ -21,7 +21,7 @@ export const Sidebar = ({ setCollapsed }) => {
       trigger={null}
       onCollapse={(collapse) => setCollapsed(collapse)}
     >
-      <AppLogo withText />
+      <AppLogo withText styles={{padding: "17px 17px"}} />
       <Menu
         theme="dark"
         mode="inline"
