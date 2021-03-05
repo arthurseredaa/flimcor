@@ -17,3 +17,13 @@
 .menuItem img {
   margin-right: 15px;
 }
+
+.closeDrawer {
+  color: #BFBFBF;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
