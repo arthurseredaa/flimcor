@@ -1,10 +1,10 @@
 .modalCard {
   position: absolute;
-  right: 100px;
-  top: 67px;
+  right: -37px;
+  top: 33px;
   width: 341px;
-  border-radius: 5px;
-  box-shadow: -10 10 20 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0px;
+  box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
   padding: 0 27px;
 }
 

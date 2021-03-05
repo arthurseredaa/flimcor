@@ -17,8 +17,10 @@ export const Finances = ({ finances, collapsed }) => {
         onClick={() => (showModal ? handleHide() : handleShow())}
         className={classes.financesWrapper}
         style={
-          collapsed
-            ? { backgroundColor: "transparent", position: "static" }
+          collapsed && showModal
+            ? { backgroundColor: "#2F2F37", position: "static", width: "105px" }
+            : collapsed
+            ? { backgroundColor: "transparent", position: "static", width: "105px" }
             : undefined
         }
       >
@@ -37,17 +39,20 @@ export const Finances = ({ finances, collapsed }) => {
           }
         >
           {numberFormat(finances, "USD")} $
+          <FinancesModal showModal={showModal} collapsed={collapsed} />
+          <div
+            style={{
+              mask: `url(${DollarIcon}) no-repeat center`,
+              backgroundColor: `${collapsed ? "#727478" : "#175FF2"}`,
+              width: 17,
+              height: 17,
+              position: "absolute",
+              right: "-25px",
+              top: "1px",
+            }}
+          ></div>
         </span>
-        <div
-          style={{
-            mask: `url(${DollarIcon}) no-repeat center`,
-            backgroundColor: `${collapsed ? "#727478" : "#175FF2"}`,
-            width: 17,
-            height: 17,
-          }}
-        ></div>
       </div>
-      <FinancesModal showModal={showModal} />
     </div>
   );
 };

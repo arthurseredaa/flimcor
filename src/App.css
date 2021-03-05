@@ -12,6 +12,10 @@
   background: linear-gradient(90.74deg, #e3eeff -37.48%, #f8fbff 108.93%);
 }
 
+.ant-card {
+  border-radius: 0;
+}
+
 .ant-card-head {
   height: 50px;
 }

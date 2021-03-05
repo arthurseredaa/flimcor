@@ -25,13 +25,19 @@ const Title = () => (
   </p>
 );
 
-const MyMoney = () => (
-  <p style={{ fontWeight: 500, fontSize: "18px" }}>
-    <span style={{ color: "#005BE4" }}>$</span> 854.1
+const MyMoney = ({ collapsed }) => (
+  <p
+    style={{
+      fontWeight: 500,
+      fontSize: "18px",
+      color: collapsed ? "#fff" : "#005BE4",
+    }}
+  >
+    <span style={{ color: "#4C7EFF" }}>$</span> 854.1
   </p>
 );
 
-export const FinancesModal = ({ showModal }) => {
+export const FinancesModal = ({ showModal, collapsed }) => {
   const { data, error, loading } = useQuery(GET_CURRENCIES);
   const [currency, setCurrency] = useState("UAH");
 
@@ -42,8 +48,22 @@ export const FinancesModal = ({ showModal }) => {
       {showModal ? (
         <Card
           title={<Title />}
-          extra={<MyMoney />}
+          extra={<MyMoney collapsed={collapsed} />}
           className={classes.modalCard}
+          bordered={false}
+          headStyle={collapsed ? {borderBottom: "1px solid #3C3C46"} : undefined}
+          style={
+            collapsed
+              ? {
+                  backgroundColor: "#2F2F37",
+                  color: "#fff",
+                  zIndex: "10",
+                  width: "96vw",
+                  right: "-53%",
+                  top: "35px",
+                }
+              : undefined
+          }
         >
           <div
             style={{
@@ -52,7 +72,9 @@ export const FinancesModal = ({ showModal }) => {
               marginBottom: "10px",
             }}
           >
-            <h1 style={{ margin: 0 }}>Основна валюта</h1>
+            <h1 style={{ margin: 0, color: collapsed ? "#fff" : undefined }}>
+              Основна валюта
+            </h1>
             <img
               src={InformationIcon}
               style={{ marginLeft: "7px", cursor: "pointer" }}
