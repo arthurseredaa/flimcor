@@ -1,0 +1,19 @@
+.currencyItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.currencyItem:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.checkbox {
+  margin-right: 15px;
+  padding: 0;
+}
+
+.currencyValue {
+  padding: 0;
+  margin: 0;
+}

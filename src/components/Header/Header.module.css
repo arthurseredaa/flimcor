@@ -1,0 +1,19 @@
+.titleText {
+  color: #758294;
+  font-weight: 400;
+  height: 15px;
+}
+
+.pageHeader {
+  background: linear-gradient(90.74deg, #e3eeff -37.48%, #f8fbff 108.93%);
+}
+
+.menuItem {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.menuItem img {
+  margin-right: 15px;
+}

@@ -1,1 +1,31 @@
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Roboto:wght@500&display=swap");
+
+.page-layout-sider {
+  background-color: #212122;
+}
+
+.page-layout-header {
+  background: linear-gradient(90.74deg, #e3eeff -37.48%, #f8fbff 108.93%);
+}
+
+.ant-card-head {
+  height: 50px;
+}
+
+.ant-card-head-title {
+  padding: 0;
+}
+
+.ant-card-body {
+  padding: 12px 24px;
+}
+
+.ant-drawer-body {
+  padding: 33px 9px 0 0;
+}
+
+.ant-drawer-header {
+  padding: 0;
+}

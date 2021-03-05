@@ -1,0 +1,9 @@
+.menuItem {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.menuItem img {
+  margin-right: 15px;
+}

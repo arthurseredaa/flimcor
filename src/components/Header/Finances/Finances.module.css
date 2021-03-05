@@ -1,0 +1,24 @@
+.financesWrapper {
+  background-color: #fff;
+  height: 50px;
+  border-radius: 5px 5px 0 0;
+  min-width: 97px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.money {
+  color: #4E9616;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17px;
+  margin-right: 10px;
+}

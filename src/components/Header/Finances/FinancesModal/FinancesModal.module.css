@@ -1,0 +1,28 @@
+.modalCard {
+  position: absolute;
+  right: 100px;
+  top: 67px;
+  width: 341px;
+  border-radius: 5px;
+  box-shadow: -10 10 20 0 rgba(0, 0, 0, 0.1);
+  padding: 0 27px;
+}
+
+.modalTitle {
+  color: #005be4;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrowRight {
+  border: solid #005be4;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 5px;
+}
