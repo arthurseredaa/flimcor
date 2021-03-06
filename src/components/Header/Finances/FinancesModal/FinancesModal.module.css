@@ -6,6 +6,7 @@
   border-radius: 0px;
   box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.1);
   padding: 0 27px;
+  z-index: 10;
 }
 
 .modalTitle {
