@@ -1,0 +1,13 @@
+.productCharWrapper {
+  width: 450px;
+  background-color: #FBFBFB;
+  padding: 23px 18px;
+  margin-top: 24px;
+}
+
+.title {
+  color: #3D3D3D;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 18px;
+}
