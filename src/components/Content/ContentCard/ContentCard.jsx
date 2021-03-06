@@ -4,14 +4,9 @@ import classes from "./ContentCard.module.css";
 
 import InfoIcon from "../../../assets/icons/information.svg";
 import CartProductIcon from "../../../assets/icons/cart-product.svg";
-
-const checkProfitability = (prof) => {
-  const num = parseInt(prof);
-
-  if (num > 400) return "#EA565E";
-  if (num > 100) return "#EBA80F";
-  if (num < 100) return "#4E9616";
-};
+import RateStarIcon from "../../../assets/icons/rate-start.svg";
+import { useHistory } from "react-router-dom";
+import { checkProfitability } from "../../../helpers/checkProfitability";
 
 export const ContentCard = ({
   image,
@@ -21,61 +16,128 @@ export const ContentCard = ({
   id,
   minQuantity,
   profitability,
+  collapsed,
 }) => {
+  const history = useHistory();
+
   return (
-    <Card className={classes.contentCard} bordered={false}>
+    <Card
+      style={collapsed ? { backgroundColor: "#F2F6FF" } : undefined}
+      className={classes.contentCard}
+      bordered={false}
+      onClick={() => history.push(`/${id}`)}
+    >
       <img src={image} className={classes.contentImage} alt="product" />
-      <p className={classes.contentTitle}>{title}</p>
+      <p className={classes.contentTitle}>
+        {title}{" "}
+        <img src={RateStarIcon} alt="star" className={classes.starIcon} />
+      </p>
       <div>
+        {!collapsed && (
+          <Row
+            gutter={24}
+            style={{
+              fontSize: "12px",
+              color: "#616977",
+              textAlign: `${collapsed ? "center" : "left"}`,
+            }}
+          >
+            <Col span={7} style={{ padding: 0 }}>
+              Цена за 1 штуку
+            </Col>
+            <Col span={8} style={{ padding: 0 }}>
+              Рентабельность{" "}
+              <Tooltip placement="top" title="Рентабельность" color="#EAF2FF">
+                <img src={InfoIcon} alt="info" />
+              </Tooltip>
+            </Col>
+            <Col span={7} style={{ paddingLeft: "15px" }}>
+              Мин{" "}
+              <Tooltip
+                placement="top"
+                title="Минимальное количество товара, которое доступно к заказу"
+                color="#EAF2FF"
+              >
+                <img src={InfoIcon} alt="info" />
+              </Tooltip>
+            </Col>
+          </Row>
+        )}
+
         <Row
           gutter={24}
-          style={{ fontSize: "12px", color: "#616977", textAlign: "left" }}
+          style={{
+            fontSize: "14px",
+            textAlign: "left",
+            padding: !collapsed ? "0 5px" : "0 10px",
+          }}
         >
-          <Col span={7} style={{ padding: 0 }}>
-            Цена за 1 штуку
-          </Col>
-          <Col span={8} style={{ padding: 0 }}>
-            Рентабельность{" "}
-            <Tooltip placement="top" title="Рентабельность" color="#EAF2FF">
-              <img src={InfoIcon} alt="info" />
-            </Tooltip>
-          </Col>
-          <Col span={7} style={{ paddingLeft: "15px" }}>
-            Мин{" "}
-            <Tooltip
-              placement="top"
-              title="Минимальное количество товара, которое доступно к заказу"
-              color="#EAF2FF"
-            >
-              <img src={InfoIcon} alt="info" />
-            </Tooltip>
-          </Col>
-        </Row>
-        <Row gutter={24} style={{ fontSize: "14px", textAlign: "left" }}>
-          <Col span={8} style={{ color: "#005BE4", padding: 0 }}>
-            {price}
+          <Col
+            span={!collapsed ? 8 : 12}
+            style={{ color: "#005BE4", padding: 0 }}
+          >
+            <span style={{ marginRight: "5px" }}>{price}</span>
+            {collapsed && (
+              <Tooltip placement="top" title="Цена" color="#EAF2FF">
+                <img src={InfoIcon} alt="info" />
+              </Tooltip>
+            )}
           </Col>
           <Col
-            span={8}
+            span={!collapsed ? 8 : 12}
             style={{ color: checkProfitability(profitability), padding: 0 }}
           >
-            {profitability}%
+            <span style={{ marginRight: "5px" }}>{profitability}%</span>
+            {collapsed && (
+              <Tooltip
+                placement="top"
+                title="Минимальное количество товара, которое доступно к заказу"
+                color="#EAF2FF"
+              >
+                <img src={InfoIcon} alt="info" />
+              </Tooltip>
+            )}
           </Col>
-          <Col span={8} style={{ padding: 0 }}>
+          {!collapsed && (
+            <Col span={8} style={{ padding: 0 }}>
+              <div className={classes.quantityCol}>
+                x{minQuantity} <img src={CartProductIcon} alt="cart product" />
+              </div>
+            </Col>
+          )}
+        </Row>
+        {/* MIN QUANTITY COLLAPSED*/}
+        {collapsed && (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
             <div
               style={{
-                backgroundColor: "#F0F3F8",
-                borderRadius: "3px",
-                color: "#959CAE",
-                textAlign: "center",
-                width: "70%",
-                padding: "5px 3px"
+                fontSize: "11px",
+                color: "#8791A1",
+                fontWeight: "400",
+                textAlign: "left",
               }}
             >
-              x{minQuantity} <img src={CartProductIcon} alt="cart product" />
+              Мин <br /> количество
             </div>
-          </Col>
-        </Row>
+            <div className={classes.quantityCollapsed}>
+              x{minQuantity}{" "}
+              <div
+                style={{
+                  mask: `url(${CartProductIcon}) center no-repeat`,
+                  backgroundColor: "#4C7EFF",
+                  height: "20px",
+                  width: "20px",
+                }}
+              ></div>
+            </div>
+          </div>
+        )}
       </div>
     </Card>
   );
