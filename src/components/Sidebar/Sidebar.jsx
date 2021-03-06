@@ -12,6 +12,8 @@ import { AppLogo } from "../universal/Logo/Logo";
 
 const { Sider } = Layout;
 
+// TODO кривий елемент меню доробити
+
 export const Sidebar = ({ setCollapsed }) => {
   return (
     <Sider
@@ -20,6 +22,7 @@ export const Sidebar = ({ setCollapsed }) => {
       collapsedWidth="0"
       trigger={null}
       onCollapse={(collapse) => setCollapsed(collapse)}
+      width="180"
     >
       <AppLogo withText styles={{padding: "17px 17px"}} />
       <Menu
