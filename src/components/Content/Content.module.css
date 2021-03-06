@@ -1,6 +1,15 @@
 .gridWRapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: auto;
+  grid-auto-flow: dense;
   gap: 10px;
+}
+
+@media (max-width: 459px) {
+  .gridWRapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+  }
 }
