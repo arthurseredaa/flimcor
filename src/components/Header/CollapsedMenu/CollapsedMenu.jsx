@@ -42,7 +42,7 @@ export const CollapsedMenu = ({ classes, setVisible, collapsed, visible }) => {
     <Drawer
       title={<DrawerHeader collapsed={collapsed} />}
       placement="left"
-      onClick={() => null}
+      onClick={() => setVisible(false)}
       onClose={() => setVisible(false)}
       visible={visible}
       closeIcon={<CloseDrawer classes={classes} />}
