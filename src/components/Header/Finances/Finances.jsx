@@ -14,13 +14,24 @@ export const Finances = ({ finances, collapsed }) => {
   return (
     <div>
       <div
-        onClick={() => (showModal ? handleHide() : handleShow())}
+        onClick={(e) => {
+          e.stopPropagation();
+          if (showModal) {
+            handleHide();
+          } else {
+            handleShow();
+          }
+        }}
         className={classes.financesWrapper}
         style={
           collapsed && showModal
             ? { backgroundColor: "#2F2F37", position: "static", width: "105px" }
             : collapsed
-            ? { backgroundColor: "transparent", position: "static", width: "105px" }
+            ? {
+                backgroundColor: "transparent",
+                position: "static",
+                width: "105px",
+              }
             : undefined
         }
       >
