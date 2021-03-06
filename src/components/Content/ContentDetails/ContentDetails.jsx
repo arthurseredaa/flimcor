@@ -39,13 +39,17 @@ export const ContentDetails = () => {
             <Col lg={10} md={12}>
               <DetailsInfo {...state} />
             </Col>
-            <Col lg={7} md={12}>
+            <Col lg={7} md={24}>
               <OrderInfo {...state} />
             </Col>
           </Row>
-          {state && state.characteristics && (
-            <ProductChar characteristics={state.characteristics} />
-          )}
+          <Row gutter={24}>
+            <Col lg={7} md={24} style={{display: "flex", justifyContent: "center"}}>
+              {state && state.characteristics && (
+                <ProductChar characteristics={state.characteristics} />
+              )}
+            </Col>
+          </Row>
         </div>
       )}
     </div>
