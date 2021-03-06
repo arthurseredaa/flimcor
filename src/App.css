@@ -6,6 +6,7 @@
 
 .page-layout-sider {
   background-color: #212122;
+  width: 500px !important;
 }
 
 .page-layout-header {
@@ -25,7 +26,7 @@
 }
 
 .ant-card-body {
-  padding: 12px 24px;
+  padding: 12px 10px;
 }
 
 .ant-drawer-body {
@@ -34,4 +35,15 @@
 
 .ant-drawer-header {
   padding: 0;
+}
+
+.ant-layout-content {
+  padding: 0 25px !important;
+}
+
+.ant-tooltip-inner {
+  color: #3B4554;
+  font-size: 14px;
+  border-radius: 3px;
+  background-color: #EAF2FF;
 }
