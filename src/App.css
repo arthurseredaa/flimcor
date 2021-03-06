@@ -26,7 +26,7 @@
 }
 
 .ant-card-body {
-  padding: 12px 10px;
+  padding: 0px 10px;
 }
 
 .ant-drawer-body {
@@ -46,4 +46,11 @@
   font-size: 14px;
   border-radius: 3px;
   background-color: #EAF2FF;
+}
+
+
+@media (max-width: 400px) {
+  .ant-layout-content {
+    padding: 0 5px !important;
+  }
 }
