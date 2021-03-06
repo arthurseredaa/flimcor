@@ -6,7 +6,7 @@ import { ContentCard } from "./ContentCard/ContentCard";
 
 const { Content } = Layout;
 
-export const AppContent = (params) => {
+export const AppContent = ({collapsed}) => {
   const [goods, setGoods] = useState([]);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export const AppContent = (params) => {
         ) : (
           <div className={classes.gridWRapper}>
             {goods &&
-              goods.map((item) => <ContentCard key={item.id} {...item} />)}
+              goods.map((item) => <ContentCard key={item.id} {...item} collapsed={collapsed} />)}
           </div>
         )}
       </div>

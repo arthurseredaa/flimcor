@@ -4,14 +4,18 @@ import { UserIcon } from "./UserIcon/UserIcon";
 import BackArrowIcon from "../../assets/icons/back-arrow.svg";
 import classes from "./Header.module.css";
 import { useState } from "react";
-import { MenuOutlined } from "@ant-design/icons";
 import { CollapsedMenu } from "./CollapsedMenu/CollapsedMenu";
+import BurgerIcon from "../../assets/icons/burger-menu.svg";
+import { useHistory } from "react-router-dom";
 
-const BackArrow = () => (
-  <img src={BackArrowIcon} alt="back arrow" height="15px" />
-);
+const BackArrow = () => {
+  const history = useHistory();
+  return <img src={BackArrowIcon} alt="back arrow" height="20px" onClick={() => history.goBack()} />
+};
 
 const TitleText = () => <p className={classes.titleText}>Назад</p>;
+
+const BurgerMenuIcon = () => <img style={{userSelect: "none"}} src={BurgerIcon} alt="burger icon" />
 
 export const Header = ({ collapsed }) => {
   const [visible, setVisible] = useState(false);
@@ -22,7 +26,7 @@ export const Header = ({ collapsed }) => {
         className="page-layout-header"
         onBack={() => (collapsed ? setVisible(true) : null)}
         title={collapsed ? " " : <TitleText />}
-        backIcon={collapsed ? <MenuOutlined /> : <BackArrow />}
+        backIcon={collapsed ? <BurgerMenuIcon /> : <BackArrow />}
         style={{
           height: "67px",
           display: "flex",
