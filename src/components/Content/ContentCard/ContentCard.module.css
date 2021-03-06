@@ -1,0 +1,12 @@
+.contentCard {
+  margin: 10px 0;
+}
+
+.contentImage {
+  width: 100%;
+}
+
+.contentTitle {
+  font-size: 16px;
+  font-weight: 700;
+}
