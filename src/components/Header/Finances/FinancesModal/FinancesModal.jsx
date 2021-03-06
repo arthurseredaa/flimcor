@@ -62,7 +62,7 @@ export const FinancesModal = ({ showModal, collapsed }) => {
                   right: "-53%",
                   top: "35px",
                 }
-              : undefined
+              : {borderRadius: "5px"}
           }
         >
           <div
