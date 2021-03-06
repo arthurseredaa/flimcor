@@ -1,0 +1,16 @@
+.detailsWrapper {
+  background-color: #fff;
+  height: 100vh;
+  padding: 30px 30px 100px;
+  overflow-y: scroll;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.productImage {
+  /* height: 390px; */
+  width: 450px;
+}
