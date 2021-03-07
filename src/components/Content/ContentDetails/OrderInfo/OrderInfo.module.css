@@ -30,7 +30,16 @@
   color: #fff;
   margin-left: 9px;
   padding: 16 23px;
-  height: 53px;
+  height: 55px;
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
+  display: flex;
+  align-items: center;
 }
+
+.buyButton:hover {
+  background-color: #0046b0;
+  color: #fff;
+}
+
+
