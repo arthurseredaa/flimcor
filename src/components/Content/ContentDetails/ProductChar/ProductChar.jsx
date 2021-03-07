@@ -8,7 +8,7 @@ export const ProductChar = ({ characteristics }) => (
     <h1 className={classes.title}>Характеристики товару</h1>
     {characteristics &&
       characteristics.map((char, index) => (
-        <>
+        <React.Fragment key={index}>
         <Row key={index} gutter={24} style={{ textAlign: "left" }}>
           <Col span={8} style={{ color: "#5B5B5B", fontSize: "13px" }}>
             {char[0]}
@@ -18,7 +18,7 @@ export const ProductChar = ({ characteristics }) => (
           </Col>
         </Row>
         <Divider style={{margin: "2px 0px 10px"}} />
-        </>
+        </React.Fragment>
       ))}
   </Card>
 );
