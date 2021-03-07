@@ -38,7 +38,7 @@ export const DetailsInfo = ({ title, description, price, profitability }) => {
             </span>
           </Col>
           <Col span={8} className={classes.subGridItem}>
-            {parseInt(price)}
+            {price}
             <span
               style={{ color: "#8C8C8C", fontSize: "16px", fontWeight: "400" }}
             >
