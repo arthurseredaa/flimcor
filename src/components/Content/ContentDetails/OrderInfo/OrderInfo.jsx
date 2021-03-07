@@ -6,6 +6,7 @@ import CartFilledIcon from "../../../../assets/icons/cart-filled.svg";
 
 export const OrderInfo = ({ title, price, minQuantity }) => {
   const [value, setValue] = useState(1);
+  console.log(typeof parseFloat(price));
 
   return (
     <div className={classes.orderInfoWrapper}>
@@ -14,8 +15,7 @@ export const OrderInfo = ({ title, price, minQuantity }) => {
       </p>
       <h1 className={classes.title}>{title}</h1>
       <p className={classes.price}>
-        {parseInt(price)}{" "}
-        <span style={{ color: "#8C8C8C", fontSize: "18px" }}>$</span>
+        {price} <span style={{ color: "#8C8C8C", fontSize: "18px" }}>$</span>
       </p>
       <Divider style={{ margin: "18px 0 16px" }} />
       <p style={{ color: "#5B626D" }}>
@@ -43,16 +43,18 @@ export const OrderInfo = ({ title, price, minQuantity }) => {
             color: "#4E9616",
             fontSize: "24px",
             display: "flex",
+            alignItems: "CENTER",
           }}
         >
-          <p style={{ display: "flex", alignItems: "center", margin: 0 }}>
-            {parseInt(price) * value}{" "}
+          <p style={{ margin: 0 }}>
+            {(parseFloat(price) * value).toFixed(1)}{" "}
             <span
               style={{
                 color: "#8C8C8C",
                 fontSize: "14px",
               }}
             >
+              {" "}
               $
             </span>
           </p>
@@ -63,13 +65,17 @@ export const OrderInfo = ({ title, price, minQuantity }) => {
               type="number"
               value={value}
               onChange={(e) => setValue(e.target.value)}
-              style={{ padding: "15px 16px" }}
+              style={{ padding: "15px 16px", fontSize: "16px" }}
             />
             <Button className={classes.buyButton}>
-              <img
-                src={CartFilledIcon}
-                alt="cart filled"
-                style={{ marginRight: "12px" }}
+              <div
+                style={{
+                  mask: `url(${CartFilledIcon}) center no-repeat`,
+                  marginRight: "12px",
+                  height: "15px",
+                  width: "15px",
+                  backgroundColor: "#fff",
+                }}
               />
               Buy
             </Button>
