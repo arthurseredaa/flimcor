@@ -43,7 +43,7 @@ export const ContentCard = ({
             }}
           >
             <Col span={7} style={{ padding: 0 }}>
-              Цена за 1 штуку
+              Цена за 1 шт
             </Col>
             <Col span={8} style={{ padding: 0 }}>
               Рентабельность{" "}
@@ -76,7 +76,7 @@ export const ContentCard = ({
             span={!collapsed ? 8 : 12}
             style={{ color: "#005BE4", padding: 0 }}
           >
-            <span style={{ marginRight: "5px" }}>{price}</span>
+            <span style={{ marginRight: "5px" }}>{price}$</span>
             {collapsed && (
               <Tooltip placement="top" title="Цена" color="#EAF2FF">
                 <img src={InfoIcon} alt="info" />

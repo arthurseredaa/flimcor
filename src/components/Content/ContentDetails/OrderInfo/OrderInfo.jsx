@@ -1,12 +1,11 @@
-import { Divider, Row, Col, Input, Button } from "antd";
+import { Divider, Row, Col } from "antd";
 import classes from "./OrderInfo.module.css";
 import UkraineFlag from "../../../../assets/icons/ukraine-flag.svg";
 import { useState } from "react";
-import CartFilledIcon from "../../../../assets/icons/cart-filled.svg";
+import { PriceCalc } from "./PriceCalc/PriceCalc";
 
 export const OrderInfo = ({ title, price, minQuantity }) => {
   const [value, setValue] = useState(1);
-  console.log(typeof parseFloat(price));
 
   return (
     <div className={classes.orderInfoWrapper}>
@@ -36,52 +35,7 @@ export const OrderInfo = ({ title, price, minQuantity }) => {
         <Col span={8}>Сума</Col>
         <Col span={16}>Количество</Col>
       </Row>
-      <Row gutter={24}>
-        <Col
-          span={8}
-          style={{
-            color: "#4E9616",
-            fontSize: "24px",
-            display: "flex",
-            alignItems: "CENTER",
-          }}
-        >
-          <p style={{ margin: 0 }}>
-            {(parseFloat(price) * value).toFixed(1)}{" "}
-            <span
-              style={{
-                color: "#8C8C8C",
-                fontSize: "14px",
-              }}
-            >
-              {" "}
-              $
-            </span>
-          </p>
-        </Col>
-        <Col span={16}>
-          <div style={{ display: "flex" }}>
-            <Input
-              type="number"
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-              style={{ padding: "15px 16px", fontSize: "16px" }}
-            />
-            <Button className={classes.buyButton}>
-              <div
-                style={{
-                  mask: `url(${CartFilledIcon}) center no-repeat`,
-                  marginRight: "12px",
-                  height: "15px",
-                  width: "15px",
-                  backgroundColor: "#fff",
-                }}
-              />
-              Buy
-            </Button>
-          </div>
-        </Col>
-      </Row>
+      <PriceCalc price={price} />
     </div>
   );
 };

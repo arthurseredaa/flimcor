@@ -10,6 +10,7 @@ import Money from "../../../assets/icons/money.svg";
 import { AppLogo } from "../../universal/Logo/Logo";
 import { Finances } from "../Finances/Finances";
 import { UserIcon } from "../UserIcon/UserIcon";
+import { useHistory } from "react-router";
 
 const CloseDrawer = ({classes}) => (
   <span className={classes.closeDrawer}>
@@ -38,6 +39,8 @@ const DrawerHeader = ({collapsed}) => (
 );
 
 export const CollapsedMenu = ({ classes, setVisible, collapsed, visible }) => {
+  const history = useHistory();
+
   return (
     <Drawer
       title={<DrawerHeader collapsed={collapsed} />}
@@ -63,7 +66,7 @@ export const CollapsedMenu = ({ classes, setVisible, collapsed, visible }) => {
           fontSize: 18
         }}
       >
-        <Menu.Item key="Catalog" className={classes.menuItem}>
+        <Menu.Item key="Catalog" className={classes.menuItem}  onClick={() => history.push("/")}>
           <img src={Catalog} width="16px" alt="catalog" />
           Каталог
         </Menu.Item>

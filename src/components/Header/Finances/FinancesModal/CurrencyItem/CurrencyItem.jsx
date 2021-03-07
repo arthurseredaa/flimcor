@@ -29,19 +29,15 @@ export const CurrencyItem = ({ code, value, currency, setCurrency }) => {
   }
 
   return (
-    <div className={classes.currencyItem}>
-      <Checkbox
-        className={classes.checkbox}
-        checked={currency === code}
-        onChange={() => setCurrency(code)}
-      />
+    <div className={classes.currencyItem} onClick={() => setCurrency(code)}>
+      <Checkbox className={classes.checkbox} checked={currency === code} />
       <div
         style={{
           mask: `url(${img}) no-repeat center`,
           width: "20px",
           height: "20px",
           backgroundColor: currency === code ? "#005BE4" : "#838B95",
-          marginRight: "14px"
+          marginRight: "14px",
         }}
       ></div>
       <p

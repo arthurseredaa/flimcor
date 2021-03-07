@@ -1,6 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
 
-import { Card } from "antd";
+import { Card, Tooltip } from "antd";
 import { useState } from "react";
 import { CurrencyItem } from "./CurrencyItem/CurrencyItem";
 
@@ -30,7 +30,7 @@ const MyMoney = ({ collapsed }) => (
     style={{
       fontWeight: 500,
       fontSize: "18px",
-      color: collapsed ? "#fff" : "#005BE4",
+      color: collapsed ? "#fff" : "#000",
     }}
   >
     <span style={{ color: "#4C7EFF" }}>$</span> 854.1
@@ -51,7 +51,9 @@ export const FinancesModal = ({ showModal, collapsed }) => {
           extra={<MyMoney collapsed={collapsed} />}
           className={classes.modalCard}
           bordered={false}
-          headStyle={collapsed ? {borderBottom: "1px solid #3C3C46"} : undefined}
+          headStyle={
+            collapsed ? { borderBottom: "1px solid #3C3C46" } : undefined
+          }
           style={
             collapsed
               ? {
@@ -62,7 +64,7 @@ export const FinancesModal = ({ showModal, collapsed }) => {
                   right: "-53%",
                   top: "35px",
                 }
-              : {borderRadius: "5px"}
+              : { borderRadius: "5px" }
           }
         >
           <div
@@ -72,14 +74,21 @@ export const FinancesModal = ({ showModal, collapsed }) => {
               marginBottom: "10px",
             }}
           >
-            <h1 style={{ margin: 0, color: collapsed ? "#fff" : undefined }}>
+            <h1
+              style={{
+                margin: "10px 0 0",
+                color: collapsed ? "#fff" : undefined,
+              }}
+            >
               Основна валюта
             </h1>
-            <img
-              src={InformationIcon}
-              style={{ marginLeft: "7px", cursor: "pointer" }}
-              alt="info"
-            />
+            <Tooltip palcement="top" title="Валюта">
+              <img
+                src={InformationIcon}
+                style={{ margin: "10px 0 0 7px", cursor: "pointer" }}
+                alt="info"
+              />
+            </Tooltip>
           </div>
           {loading && <p>Loading...</p>}
           {data &&

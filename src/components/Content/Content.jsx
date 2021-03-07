@@ -31,7 +31,7 @@ export const AppContent = ({collapsed}) => {
         overflowX: "hidden"
       }}
     >
-      <div>
+      <div className={classes.container}>
         {goods.length === 0 ? (
           <h1 style={{ margin: "auto", width: "200px" }}>Loading...</h1>
         ) : (
