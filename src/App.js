@@ -21,7 +21,7 @@ function App() {
           exact
           render={() => <AppContent collapsed={collapsed} />}
         />
-        <Route path="/:id" exact render={() => <ContentDetails />} />
+        <Route path="/:id" exact render={() => <ContentDetails collapsed={collapsed} />} />
       </Layout>
     </Layout>
   );
