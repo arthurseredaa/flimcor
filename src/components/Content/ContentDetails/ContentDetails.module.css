@@ -3,14 +3,100 @@
   height: 100vh;
   padding: 30px 30px 100px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  padding-top: 0px;
 }
 
 .productImage {
-  /* height: 390px; */
   width: 450px;
+}
+
+.collapsedPrice {
+  background-color: #f9f9fd;
+  height: 75px;
+  padding: 0 15px;
+  align-items: center;
+}
+
+.calcQunatity {
+  background-color: #f3f3fb;
+  border: 1px solid #dadae8;
+  display: flex;
+  width: 120px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 3px;
+  padding: 10px 0;
+  z-index: 2;
+}
+
+.divider {
+  font-size: 20px;
+  color: #dadae8;
+  border-right: 1px solid #dadae8;
+  padding: 0 15px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.divider:active {
+  color: #005be4;
+}
+
+.plus {
+  font-size: 20px;
+  color: #dadae8;
+  cursor: pointer;
+  border-left: 1px solid #dadae8;
+  padding: 0 15px 0;
+  user-select: none;
+}
+
+.plus:active {
+  color: #005be4;
+}
+
+.value {
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.value p {
+  margin: 0;
+}
+
+.buy {
+  border-radius: 3px;
+  background-color: #005BE4;
+  border: none;
+  color: #fff;
+  padding: 16 20px;
+  height: 53px;
+  width: 80px;
+  font-size: 16px;
+}
+
+.buy:hover {
+  background-color: #0046b0;
+}
+
+@media (max-width: 459px) {
+  .productImage {
+    max-width: 350px;
+    margin: 0 0 20px;
+  }
+  .detailsWrapper {
+    padding: 0;
+  }
+  .productRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

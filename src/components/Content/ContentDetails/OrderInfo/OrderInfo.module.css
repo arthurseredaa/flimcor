@@ -1,6 +1,6 @@
 .orderInfoWrapper {
   width: 450px;
-  height: 390px;
+  min-height: 390px;
   background-color: #FAFAFA;
   padding: 18px 22px 30px;
   margin-left: 36px;
@@ -42,4 +42,15 @@
   color: #fff;
 }
 
+@media (max-width: 459px) {
+  .orderInfoWrapper {
+    width: 95vw;
+    margin: 0 auto;
+    padding-bottom: 27px;
+    margin-bottom: 11px;
+  }
+  .articul {
+    font-size: 13px;
+  }
+}
 

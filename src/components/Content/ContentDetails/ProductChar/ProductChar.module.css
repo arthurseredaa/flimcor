@@ -3,7 +3,6 @@
   background-color: #FBFBFB;
   padding: 23px 18px;
   margin-top: 24px;
-  /* margin-left: 10px; */
 }
 
 .title {
@@ -11,4 +10,24 @@
   font-size: 18px;
   line-height: 20px;
   margin-bottom: 18px;
+}
+
+.collapsedBadge {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  background-color: #F4F6F9;
+  padding: 11px 8px 5px 16px;
+}
+
+@media (max-width: 459px) {
+  .productCharWrapper {
+    width: 100vw;
+    margin: 20px auto 11px;
+    padding: 13px 0 9px 16px;
+    background-color: #F4F6F9;
+  }
+  .colItem {
+    margin: 9px 0;
+  }
 }
