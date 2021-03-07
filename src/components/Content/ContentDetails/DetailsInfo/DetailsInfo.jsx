@@ -1,8 +1,15 @@
-import { Col, Row } from "antd";
+import { Col, Row, Tooltip } from "antd";
 import classes from "./DetailsInfo.module.css";
 import { checkProfitability } from "../../../../helpers/checkProfitability";
+import InfoIcon from "../../../../assets/icons/information.svg";
 
-export const DetailsInfo = ({ title, description, price, profitability }) => {
+export const DetailsInfo = ({
+  title,
+  description,
+  price,
+  profitability,
+  collapsed,
+}) => {
   return (
     <div className={classes.detailsInfoWrapper}>
       <h1 className={classes.title}>{title}</h1>
@@ -11,21 +18,30 @@ export const DetailsInfo = ({ title, description, price, profitability }) => {
           textAlign: "left",
           color: "#888888",
           fontSize: "15px",
-          margin: "9px 0 26px",
+          margin: `${!collapsed ? "9px 0 26px" : "9px 0 26px 15px"}`,
         }}
       >
         5 pc(s)
       </p>
-      <div className={classes.detailes}>
-        <Row gutter={24}>
+      <div className={classes.details}>
+        <Row gutter={24} style={{ display: "flex", alignItems: "center" }}>
           <Col span={8} className={classes.gridItem}>
             Ціна закупки
+            <Tooltip placement="top" title="Tooltip">
+              <img src={InfoIcon} alt="info" className={classes.infoIcon} />
+            </Tooltip>
           </Col>
           <Col span={8} className={classes.gridItem}>
             Ціна продажу
+            <Tooltip placement="top" title="Tooltip">
+              <img src={InfoIcon} alt="info" className={classes.infoIcon} />
+            </Tooltip>
           </Col>
           <Col span={8} className={classes.gridItem}>
             Рентабельність
+            <Tooltip placement="top" title="Tooltip">
+              <img src={InfoIcon} alt="info" className={classes.infoIcon} />
+            </Tooltip>
           </Col>
         </Row>
         <Row gutter={24}>
