@@ -1,0 +1,23 @@
+.diagramWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 30px;
+}
+
+.firstItem {
+  background-color: #D7DFEB;
+  width: 3px;
+  height: 12px;
+}
+.secondItem {
+  background-color: #D7DFEB;
+  width: 3px;
+  height: 10px;
+  margin: 0 3px;
+}
+.thirdItem {
+  background-color: #D7DFEB;
+  width: 3px;
+  height: 8px;
+}

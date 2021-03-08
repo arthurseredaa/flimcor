@@ -8,7 +8,7 @@ import CartProductIcon from "../../../assets/icons/cart-product.svg";
 import RateStarIcon from "../../../assets/icons/rate-start.svg";
 
 import classes from "./ContentCard.module.css";
-
+import { ProfitabilityDiagram } from "./ProfitabilityDiagram/ProfitabilityDiagram";
 
 export const ContentCard = ({
   image,
@@ -41,6 +41,8 @@ export const ContentCard = ({
               fontSize: "12px",
               color: "#616977",
               textAlign: `${collapsed ? "center" : "left"}`,
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <Col span={7} style={{ padding: 0 }}>
@@ -71,10 +73,12 @@ export const ContentCard = ({
             fontSize: "14px",
             textAlign: "left",
             padding: !collapsed ? "0 5px" : "0 10px",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <Col
-            span={!collapsed ? 8 : 12}
+            span={!collapsed ? 7 : 10}
             style={{ color: "#005BE4", padding: 0 }}
           >
             <span style={{ marginRight: "5px" }}>{price}$</span>
@@ -85,9 +89,16 @@ export const ContentCard = ({
             )}
           </Col>
           <Col
-            span={!collapsed ? 8 : 12}
-            style={{ color: checkProfitability(profitability), padding: 0 }}
+            span={!collapsed ? 8 : 14}
+            style={{
+              color: checkProfitability(profitability),
+              padding: 0,
+              display: "flex",
+              justifyContent: "flex-start",
+              alignItems: "center",
+            }}
           >
+            <ProfitabilityDiagram profitability={profitability} />
             <span style={{ marginRight: "5px" }}>{profitability}%</span>
             {collapsed && (
               <Tooltip
@@ -100,7 +111,7 @@ export const ContentCard = ({
             )}
           </Col>
           {!collapsed && (
-            <Col span={8} style={{ padding: 0 }}>
+            <Col span={7} style={{ padding: 0 }}>
               <div className={classes.quantityCol}>
                 x{minQuantity} <img src={CartProductIcon} alt="cart product" />
               </div>
