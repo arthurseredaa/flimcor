@@ -1,18 +1,19 @@
 import { Card, Col, Row } from "antd";
 import { Tooltip } from "antd";
-import classes from "./ContentCard.module.css";
+import { useHistory } from "react-router-dom";
+import { checkProfitability } from "../../../helpers/checkProfitability";
 
 import InfoIcon from "../../../assets/icons/information.svg";
 import CartProductIcon from "../../../assets/icons/cart-product.svg";
 import RateStarIcon from "../../../assets/icons/rate-start.svg";
-import { useHistory } from "react-router-dom";
-import { checkProfitability } from "../../../helpers/checkProfitability";
+
+import classes from "./ContentCard.module.css";
+
 
 export const ContentCard = ({
   image,
   title,
   price,
-  isPartner,
   id,
   minQuantity,
   profitability,

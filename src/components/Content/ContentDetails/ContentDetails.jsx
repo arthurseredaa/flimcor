@@ -26,7 +26,7 @@ export const ContentDetails = ({ collapsed }) => {
   }, [id]);
 
   const handleDivid = () => {
-    if (value !== 0) {
+    if (value !== 1) {
       setValue(value - 1);
     }
   };
@@ -60,7 +60,7 @@ export const ContentDetails = ({ collapsed }) => {
                 </div>
 
                 <Button className={classes.buy}>
-                  <img src={CartFilledIcon} width="24px" />
+                  <img src={CartFilledIcon} width="24px" alt="cart filled" />
                 </Button>
               </Col>
             </Row>
