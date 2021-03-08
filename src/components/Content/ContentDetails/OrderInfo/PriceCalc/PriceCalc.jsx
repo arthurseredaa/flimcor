@@ -3,9 +3,7 @@ import CartFilledIcon from "../../../../../assets/icons/cart-filled.svg";
 import classes from "./PriceCalc.module.css";
 import { Row, Col, Input, Button } from "antd";
 
-export const PriceCalc = ({ price }) => {
-  const [value, setValue] = useState(1);
-
+export const PriceCalc = ({ price, value, setValue }) => {
   return (
     <Row gutter={24}>
       <Col
@@ -35,7 +33,7 @@ export const PriceCalc = ({ price }) => {
           <Input
             type="number"
             value={value}
-            onChange={(e) => setValue(e.target.value)}
+            onChange={setValue}
             style={{ padding: "15px 16px", fontSize: "16px" }}
           />
           <Button className={classes.buyButton}>

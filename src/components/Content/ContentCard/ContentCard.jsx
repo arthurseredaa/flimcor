@@ -23,7 +23,7 @@ export const ContentCard = ({
 
   return (
     <Card
-      style={collapsed ? { backgroundColor: "#F2F6FF" } : undefined}
+      style={collapsed ? { backgroundColor: "#F2F6FF", padding: "10px 0" } : undefined}
       className={classes.contentCard}
       bordered={false}
       onClick={() => history.push(`/${id}`)}
