@@ -57,6 +57,33 @@
   margin-left: 5px;
 }
 
+@media (max-width: 1820px) {
+  .detailsInfoWrapper {
+    width: auto;
+  }
+  .details {
+    padding: 0;
+  }
+  .gridItem {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .detailsInfoWrapper {
+    border: none;
+  }
+  .detailsText {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width:  760px) {
+  .detailsText {
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 459px) {
   .detailsInfoWrapper {
     width: 100vw;

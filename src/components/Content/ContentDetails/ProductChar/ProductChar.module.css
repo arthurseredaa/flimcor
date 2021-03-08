@@ -5,7 +5,7 @@
   margin-top: 24px;
 }
 
-.title {
+.titleBadge {
   color: #3D3D3D;
   font-size: 18px;
   line-height: 20px;
@@ -14,10 +14,39 @@
 
 .collapsedBadge {
   position: absolute;
-  top: -14px;
-  left: 0;
   background-color: #F4F6F9;
   padding: 11px 8px 5px 16px;
+  display: none;
+}
+
+.charDivider {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .productCharWrapper {
+    height: auto;
+  }
+  .titleBadge {
+    display: none;
+  }
+  .productCharWrapper {
+    position: relative;
+    background-color: #F4F6F9;
+  }
+}
+
+@media (max-width: 775px) {
+  .productCharWrapper {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .collapsedBadge {
+    display: block;
+    left: 0;
+    top: -35px;
+    border-radius: 3px;
+  }
 }
 
 @media (max-width: 459px) {
@@ -29,5 +58,8 @@
   }
   .colItem {
     margin: 9px 0;
+  }
+  .charDivider {
+    display: none;
   }
 }

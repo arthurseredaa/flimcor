@@ -42,6 +42,23 @@
   color: #fff;
 }
 
+@media (max-width: 1820px) {
+  .orderInfoWrapper {
+    width: auto;
+  }
+  .productInfo {
+    margin: 0 0 10px !important;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 780px) {
+  .orderInfoWrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 459px) {
   .orderInfoWrapper {
     width: 95vw;
