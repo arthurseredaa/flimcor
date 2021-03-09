@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/flimcor/static/css/main.6307574f.chunk.css",
+    "main.js": "/flimcor/static/js/main.cf515efa.chunk.js",
+    "main.js.map": "/flimcor/static/js/main.cf515efa.chunk.js.map",
+    "runtime-main.js": "/flimcor/static/js/runtime-main.86834968.js",
+    "runtime-main.js.map": "/flimcor/static/js/runtime-main.86834968.js.map",
+    "static/css/2.fc2db407.chunk.css": "/flimcor/static/css/2.fc2db407.chunk.css",
+    "static/js/2.6171181d.chunk.js": "/flimcor/static/js/2.6171181d.chunk.js",
+    "static/js/2.6171181d.chunk.js.map": "/flimcor/static/js/2.6171181d.chunk.js.map",
+    "index.html": "/flimcor/index.html",
+    "static/css/2.fc2db407.chunk.css.map": "/flimcor/static/css/2.fc2db407.chunk.css.map",
+    "static/css/main.6307574f.chunk.css.map": "/flimcor/static/css/main.6307574f.chunk.css.map",
+    "static/js/2.6171181d.chunk.js.LICENSE.txt": "/flimcor/static/js/2.6171181d.chunk.js.LICENSE.txt",
+    "static/media/back-arrow.86e1e133.svg": "/flimcor/static/media/back-arrow.86e1e133.svg",
+    "static/media/box.f0dd84b5.svg": "/flimcor/static/media/box.f0dd84b5.svg",
+    "static/media/burger-menu.b56a5c50.svg": "/flimcor/static/media/burger-menu.b56a5c50.svg",
+    "static/media/cart-filled.d32368e1.svg": "/flimcor/static/media/cart-filled.d32368e1.svg",
+    "static/media/cart-product.0019fed8.svg": "/flimcor/static/media/cart-product.0019fed8.svg",
+    "static/media/cart.55430895.svg": "/flimcor/static/media/cart.55430895.svg",
+    "static/media/catalog.36d99cc2.svg": "/flimcor/static/media/catalog.36d99cc2.svg",
+    "static/media/dollar-icon.4960aa14.svg": "/flimcor/static/media/dollar-icon.4960aa14.svg",
+    "static/media/dollar.2cb15603.svg": "/flimcor/static/media/dollar.2cb15603.svg",
+    "static/media/euro.c2108992.svg": "/flimcor/static/media/euro.c2108992.svg",
+    "static/media/grivnya.97917f69.svg": "/flimcor/static/media/grivnya.97917f69.svg",
+    "static/media/information.d0de5242.svg": "/flimcor/static/media/information.d0de5242.svg",
+    "static/media/logo.c8ae9c1f.svg": "/flimcor/static/media/logo.c8ae9c1f.svg",
+    "static/media/money.9b030460.svg": "/flimcor/static/media/money.9b030460.svg",
+    "static/media/orders.d23a9060.svg": "/flimcor/static/media/orders.d23a9060.svg",
+    "static/media/rate-start.240cffd2.svg": "/flimcor/static/media/rate-start.240cffd2.svg",
+    "static/media/ukraine-flag.9d093308.svg": "/flimcor/static/media/ukraine-flag.9d093308.svg",
+    "static/media/user.fd15c8cb.svg": "/flimcor/static/media/user.fd15c8cb.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86834968.js",
+    "static/css/2.fc2db407.chunk.css",
+    "static/js/2.6171181d.chunk.js",
+    "static/css/main.6307574f.chunk.css",
+    "static/js/main.cf515efa.chunk.js"
+  ]
+}
