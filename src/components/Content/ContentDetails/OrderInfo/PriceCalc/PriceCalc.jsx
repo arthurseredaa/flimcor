@@ -1,10 +1,8 @@
-import { useState } from "react";
 import CartFilledIcon from "../../../../../assets/icons/cart-filled.svg";
 import classes from "./PriceCalc.module.css";
 import { Row, Col, Input, Button } from "antd";
 
-export const PriceCalc = ({ price, value, setValue }) => {
-  return (
+export const PriceCalc = ({ price, value, setValue }) =>  (
     <Row gutter={24}>
       <Col
         span={8}
@@ -52,4 +50,4 @@ export const PriceCalc = ({ price, value, setValue }) => {
       </Col>
     </Row>
   );
-};
+
